@@ -1,0 +1,2 @@
+include README.md
+recursive-include django_migrations_auto/test_app/scripts *
