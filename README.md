@@ -1,5 +1,8 @@
 # django-migrations-auto
 
+![License](https://img.shields.io/badge/license-MIT-green)
+
+
 A Django app to store migrations in the database and apply them automatically.
 
 ## Overview
@@ -64,7 +67,7 @@ To run the tests, first set up the test environment:
 2.	Before running tests, ensure sqlite3 is updated by executing the `install_sqlite3.sh` script located in the test_app/scripts directory. This script checks the current version of sqlite3 and installs the required version if necessary.
 3.	Run the tests using the following command:
 ```bash
-DJANGO_SETTINGS_MODULE=django_migrations_auto.settings_test python manage.py test
+DJANGO_SETTINGS_MODULE=django_migrations_auto.settings_test python manage.py test django_migrations_auto.tests
 ```
 #### install_sqlite3.sh Script
 
