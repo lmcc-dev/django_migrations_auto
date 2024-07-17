@@ -39,7 +39,7 @@ INSTALLED_APPS = [
 
 ### 2. Run Migrations
 ```bash 
-python manage.py migrate migrations_log
+python manage.py auto_migrate migrations_log
 ```
 ### 3. Custom Management Commands
 
