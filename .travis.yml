@@ -1,0 +1,30 @@
+language: python
+
+python:
+  - "3.8"  # or any other Python version you want to test
+
+services:
+  - docker  # Use Docker to ensure the latest version of sqlite3
+
+env:
+  global:
+    - DJANGO_SETTINGS_MODULE=django_migrations_auto.settings_test  # Specify test settings
+    - PYTHONPATH=.
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y curl gcc make unzip  # Install required dependencies
+  - bash ./django_migrations_auto/test_app/scripts/install_sqlite3.sh  # Run script to update sqlite3
+
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls  # For code coverage
+
+before_script:
+  - python manage.py migrate  # Run migrations
+
+script:
+  - DJANGO_SETTINGS_MODULE=django_migrations_auto.settings_test coverage run --source='.' manage.py test django_migrations_auto.tests  # Run tests and generate coverage report
+
+after_success:
+  - coveralls  # Submit coverage report
