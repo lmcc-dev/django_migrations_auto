@@ -1,6 +1,11 @@
 # django-migrations-auto
 
 ![License](https://img.shields.io/badge/license-MIT-green)
+[![Build Status](https://travis-ci.com/lmcc-dev/django_migrations_auto.svg?branch=main)](https://travis-ci.com/lmcc-dev/django_migrations_auto)
+[![Coverage Status](https://coveralls.io/repos/github/lmcc-dev/django_migrations_auto/badge.svg?branch=main)](https://coveralls.io/github/lmcc-dev/django_migrations_auto?branch=main)
+[![Python Versions](https://img.shields.io/pypi/pyversions/django-migrations-auto.svg)](https://pypi.org/project/django-migrations-auto/)
+[![PyPI Version](https://img.shields.io/pypi/v/django-migrations-auto.svg)](https://pypi.org/project/django-migrations-auto/)
+
 
 
 A Django app to store migrations in the database and apply them automatically.

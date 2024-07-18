@@ -1,0 +1,11 @@
+# Django framework
+Django>=3.2,<5.1
+
+# SQLite3 bindings for Python
+pysqlite3>=0.5.0
+
+# Code coverage tool
+coverage
+
+# Other dependencies
+# List any other dependencies your project requires here
